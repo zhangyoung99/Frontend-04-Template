@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,7 @@
         }
         #container {
             width: 701px;
+            font-size: 0px;
         }
         .clear {
             margin-left: 50px;
@@ -84,8 +85,7 @@
                 }
                 // await sleep(1);
                 container.children[y * 100 + x].style.backgroundColor = "lightgreen"
-                // map[y * 100 + x] = 2;
-                table[y* 100 + x] =  pre;
+                table[y* 100 + x] = pre;
                 queue.push([x,y])
             }
 

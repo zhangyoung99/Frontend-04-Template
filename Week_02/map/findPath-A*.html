@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,7 @@
         }
         #container {
             width: 701px;
+            font-size: 0px;
         }
         .clear {
             margin-left: 50px;
@@ -40,7 +41,7 @@
                 let minIndex = 0;
 
                 for(let i = 1; i < this.data.length; i++) {
-                    if(this.compare(this.data[i],min) < 0) {
+                    if(this.compare(this.data[i], min) < 0) {
                         min = this.data[i];
                         minIndex = i;
                     }
@@ -100,7 +101,7 @@
 
         async function findPath(map,start,end) {
             let table = Object.create(map);
-            let queue =  new Sorted([start], (a,b) => distance(a) - distance(b));
+            let queue = new Sorted([start], (a,b) => distance(a) - distance(b));
 
             async function insert(x, y, pre) {
                 if(x < 0 || x >= 100 || y < 0 || y >= 100) {
@@ -109,10 +110,9 @@
                 if(table[y * 100 + x]) {
                     return;
                 }
-                await sleep(5)
+                await sleep(5);
                 container.children[y * 100 + x].style.backgroundColor = "lightgreen"
-                table[y* 100 + x] =  pre;
-                // queue.push([x,y])
+                table[y* 100 + x] = pre;
                 queue.give([x,y])
             }
 
@@ -129,7 +129,7 @@
                     while( x != start[0] || y != start[1]) {
                         path.push(map[y * 100 + x]);
                         [x, y] = table[y * 100 + x];
-                        await sleep(5);
+                        // await sleep(5);
                         container.children[y * 100 + x].style.backgroundColor = "purple";
                     }
                     return path;
