@@ -13,7 +13,7 @@
   - 数据描述语言
   JSON HTML XAML XML SQL CSS
   - 编程语言
-  javascript java python go C C++ C# Ruby PHP Haskell Scala Clojure Lua Erlang Perl Pascal
+  javascript java python go C C++ C# Ruby PHP Haskell Scala Clojure Lua Erlang Perl Pascal等
 
 形式语言-表达方式
 
@@ -22,4 +22,22 @@
  - 命令型语言
 javascript Java C/C++ Python Clojure shell PHP C C++ Erlang Kotlin Scala等
 
-[语言分类参考](https://www.tiobe.com/tiobe-index/)
+[计算机语言分类参考](https://www.tiobe.com/tiobe-index/)
+
+
+## 对象
+
+Object in JavaScript
+
+数据属性（Data Property）——用于描述状态
+- value
+- writable
+- enumerable
+- configurable
+
+访问器属性(Accessor Property)——用于描述行为
+
+- get 
+- set
+- enumerable
+- configurable
