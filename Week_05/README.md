@@ -36,6 +36,10 @@ Symbol ===> new Object(Symbol('a'))  ===> Symbol('a')
    - [[value]] 基本类型
    - [[target]] label
 
+- Lexical Environment(ES5)
+
+  词法环境，获取变量时使用
+
 - 简单语句 和 复合语句
 
   简单语句
@@ -121,18 +125,32 @@ Symbol ===> new Object(Symbol('a'))  ===> Symbol('a')
    
 
    ```
+   //作用范围只认 Fuction 作用域
+
     function 
     function *
     async function 
     async function *
     var
-    //作用范围只认 Fuction 作用域
 
+    // 块级作用域 ，声明不能提升
     class
     const
     let
-    // 块级作用域 ，声明不能提升
    ```
 
-函数调用
+## JS结构化
+
+- JS 执行粒度(运行时)
+
+  - 宏任务
+  - 微任务
+  - 函数调用
+  - 语句/声明
+  - 表达式
+  - 直接量/变量/this
+
+- 宏任务与微任务
+
+我们把宿主发起的任务称为宏观任务，把 JavaScript 引擎发起的任务称为微观任务。
 
