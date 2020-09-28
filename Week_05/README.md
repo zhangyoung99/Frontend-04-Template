@@ -154,3 +154,10 @@ Symbol ===> new Object(Symbol('a'))  ===> Symbol('a')
 
 我们把宿主发起的任务称为宏观任务，把 JavaScript 引擎发起的任务称为微观任务。
 
+- JS函数调用
+
+  - Realm (领域，ES2018之后纳入规范)
+
+  在一个 JavaScript 引擎实例里，所有的内置对象都会放进 Realm
+  在不同的 Realm 实例之间，完全互相独立，instanceof 可能会失效
+
