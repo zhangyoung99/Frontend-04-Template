@@ -14,6 +14,7 @@
 
 ## JS中的有限状态机（Mealy）
 
+```
 function state(input) {
     // code...
     return next // 返回值作为下一个状态
@@ -24,6 +25,7 @@ while(input) {
     // 获取输入
     state = state(input)  // 把状态机的返回值作为下一个状态
 }
+```
 
 ## 浏览器工作原理
 
