@@ -24,3 +24,35 @@ while(input) {
     // 获取输入
     state = state(input)  // 把状态机的返回值作为下一个状态
 }
+
+## 浏览器工作原理
+
+- ISO-OSI 七层网络模型
+
+应用层   HTTP
+
+表示
+
+会话
+
+传输   TCP
+
+网络   IP协议 Internet
+
+数据链路  4G/5G/wifi
+
+物理层
+
+- TCP 与 IP 的基础知识
+
+    - 流
+    - 端口
+    - require('net')
+    - 包
+    - IP地址
+    - libnet/libcap
+
+- HTTP
+   - request
+   - response
+
