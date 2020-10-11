@@ -5,7 +5,7 @@ const server = http.createServer((req,res) => {
     res.setHeader('X-Foo', 'bar')
     res.writeHead(200,{ 'Content-Type': 'text/plain'})
     res.end(
-        `<html maaa = a>
+        `<html maaa=a>
           <head>
             <style>
               body div #myid {
@@ -19,7 +19,7 @@ const server = http.createServer((req,res) => {
          </header>
          <body>
            <div id="myid">
-             <img />
+             <img src="a" />
            </div>
 
          </body>`
