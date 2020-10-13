@@ -2,7 +2,7 @@ let currentToken = null;
 let currentAttribute = null;
 let currentTextNode = null;
 let css = require('css');
-const { match } = require('assert');
+// const { match } = require('assert');
 
 let stack = [{type: "document", children: []}]
 
@@ -158,7 +158,7 @@ function emit(token) {
     }
 }
 
-const EOF = Symbol("EOF")
+const EOF = Symbol("EOF") // EOF: End Of File
 
 function data(c) {
     if(c == "<"){
@@ -372,7 +372,7 @@ function afterAttributeName(c) {
 
 module.exports.parseHTML =  function parseHTML(html) {
     let state = data
-    for(let c of data) {
+    for(let c of html) {
         state = state(c)
     }
     state = state(EOF)
