@@ -167,7 +167,7 @@ function layout(element) {
             }
             if(itemStyle[crossSize] !== null && itemStyle[crossSize] !== (void 0))
               crossSpace = Math.max(crossSpace, itemStyle[crossSize])
-            mainSpace = itemStyle[mainSize]
+            mainSpace -= itemStyle[mainSize]
         }
     }
     flexLine.mainSpace = mainSpace
