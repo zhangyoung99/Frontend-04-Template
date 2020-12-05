@@ -11,7 +11,7 @@ element.addEventListener("mousedown", e => {
 
     let context = Object.create(null);
     contexts.set("mouse" + (1 << e.button), context)
-    start(e);
+    start(e, context);
 
     let mousemove = e => {
         let button = 1;
